@@ -1,75 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Namis Ibrahim | Cloud & Cybersecurity</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namis Ibrahim | Cloud Engineer</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 </head>
+
 <body>
 
-<header>
-    <h1>Namis Ibrahim</h1>
-    <p>Cloud | Cybersecurity | Systems Engineer</p>
-</header>
+<div class="container">
 
-<nav>
-    <button onclick="showSection('about')">About</button>
-    <button onclick="showSection('experience')">Experience</button>
-    <button onclick="showSection('education')">Education</button>
-    <button onclick="showSection('projects')">Projects</button>
-</nav>
+<!-- Sidebar -->
+<aside class="sidebar">
+    <h2>Namis Ibrahim</h2>
+    <p>Cloud & Cybersecurity</p>
 
-<section id="about" class="active">
-    <h2>About Me</h2>
-    <p>Aspiring Cyber Security Analyst with experience in Wintel environments, Active Directory, and automation.</p>
+    <nav>
+        <button onclick="showSection('home')"><i class="fas fa-home"></i> Home</button>
+        <button onclick="showSection('projects')"><i class="fas fa-code"></i> Projects</button>
+        <button onclick="showSection('about')"><i class="fas fa-user"></i> About</button>
+        <button onclick="showSection('contact')"><i class="fas fa-envelope"></i> Contact</button>
+    </nav>
+
+    <div class="visitor-box">
+        <p>Visitors</p>
+        <h3 id="counter">...</h3>
+    </div>
+
+    <div class="socials">
+        <a href="https://github.com/YOUR_USERNAME"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/YOUR_PROFILE"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+</aside>
+
+<!-- Main -->
+<main>
+
+<!-- HOME -->
+<section id="home" class="active">
+    <div class="hero">
+        <h1>Hi, I'm <span>Namis Ibrahim</span></h1>
+        <h2>Aspiring Cyber Security Engineer</h2>
+        <p>Building cloud, security, and automation solutions using Azure and modern DevOps practices.</p>
+
+        <div class="buttons">
+            <button onclick="showSection('projects')">View Projects</button>
+            <a href="resume.pdf" download>
+                <button>Download CV</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="card"><i class="fas fa-briefcase"></i><p>3+ Years Experience</p></div>
+        <div class="card"><i class="fas fa-shield-alt"></i><p>5 Security Projects</p></div>
+        <div class="card"><i class="fas fa-cloud"></i><p>Azure Cloud</p></div>
+        <div class="card"><i class="fas fa-code"></i><p>Automation</p></div>
+    </div>
 </section>
 
-<section id="experience">
-    <h2>Experience</h2>
-    <h3>Associate Systems Engineer – Datacom</h3>
-    <ul>
-        <li>Managed Windows Server environments</li>
-        <li>Administered Active Directory & Azure AD</li>
-        <li>Performed patching, backups, and restores</li>
-        <li>Automated tasks using PowerShell</li>
-    </ul>
-</section>
-
-<section id="education">
-    <h2>Education</h2>
-    <p>Master of Cyber Security – RMIT (Ongoing)</p>
-    <p>Certificate IV Cyber Security – Victoria University</p>
-</section>
-
+<!-- PROJECTS -->
 <section id="projects">
-    <h2>Projects</h2>
+<h2>Projects</h2>
 
-    <div class="project">
-        <h3>SIEM – Wazuh Lab</h3>
-        <p>Implemented SIEM monitoring and incident response workflows.</p>
-    </div>
+<div class="project-grid">
 
-    <div class="project">
-        <h3>Azure Honeypot</h3>
-        <p>Deployed honeypot VM to capture and analyse attack patterns.</p>
-    </div>
+<div class="project">
+<h3>SIEM – Wazuh Lab</h3>
+<p>Implemented SIEM monitoring, alerting rules, and incident response workflows.</p>
+</div>
 
-    <div class="project">
-        <h3>SOAR Automation</h3>
-        <p>Automated incident response using Tines and LimaCharlie.</p>
-    </div>
+<div class="project">
+<h3>Azure Honeypot</h3>
+<p>Captured real-world attack traffic and analysed malicious patterns.</p>
+</div>
 
-    <div class="project">
-        <h3>Malware Analysis Lab</h3>
-        <p>Analysed malicious files in controlled sandbox environment.</p>
-    </div>
+<div class="project">
+<h3>SOAR Automation</h3>
+<p>Automated incident response using Tines + LimaCharlie.</p>
+</div>
 
-    <div class="project">
-        <h3>Active Directory Lab</h3>
-        <p>Built AD lab for user management, GPOs, and attack simulations.</p>
-    </div>
+<div class="project">
+<h3>Malware Analysis Lab</h3>
+<p>Analysed malware using sandbox and reverse engineering techniques.</p>
+</div>
 
+<div class="project">
+<h3>Active Directory Lab</h3>
+<p>Simulated AD attacks and defence techniques.</p>
+</div>
+
+</div>
 </section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About Me</h2>
+<p>
+Associate Systems Engineer with hands-on experience in Windows infrastructure, 
+Active Directory, Azure AD, and cybersecurity labs. Passionate about cloud security 
+and automation.
+</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+<p><i class="fas fa-envelope"></i> namisibrahim85@gmail.com</p>
+<p><i class="fab fa-linkedin"></i> linkedin.com/in/namisibrahim</p>
+</section>
+
+</main>
+</div>
 
 <script src="script.js"></script>
 </body>
