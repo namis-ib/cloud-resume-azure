@@ -3,121 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Namis Ibrahim | Cloud Engineer</title>
+<title>Namis Ibrahim</title>
 
 <link rel="stylesheet" href="style.css">
-
-<!-- Icons -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 </head>
-
 <body>
 
-<div class="container">
+<div class="layout">
 
-<!-- Sidebar -->
-<aside class="sidebar">
-    <h2>Namis Ibrahim</h2>
-    <p>Cloud & Cybersecurity</p>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <button onclick="showSection('about')">About</button>
+        <button onclick="showSection('experience')">Experience</button>
+	<button onclick="showSection('education')">Education</button>
+        <button onclick="showSection('projects')">Projects </button>
+        <button onclick="showSection('contact')">Contact</button>
+    </aside>
 
-    <nav>
-        <button onclick="showSection('home')"><i class="fas fa-home"></i> Home</button>
-        <button onclick="showSection('projects')"><i class="fas fa-code"></i> Projects</button>
-        <button onclick="showSection('about')"><i class="fas fa-user"></i> About</button>
-        <button onclick="showSection('contact')"><i class="fas fa-envelope"></i> Contact</button>
-    </nav>
+    <!-- Main -->
+    <main>
 
-    <div class="visitor-box">
-        <p>Visitors</p>
-        <h3 id="counter">...</h3>
-    </div>
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <img src="profile.png" class="avatar">
 
-    <div class="socials">
-        <a href="https://github.com/YOUR_USERNAME"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/YOUR_PROFILE"><i class="fab fa-linkedin"></i></a>
-    </div>
+            <div class="profile-info">
+                <h1>Namis Ibrahim</h1>
+                <p>Associate Systems Engineer</p>
 
-</aside>
+                <div class="socials">
+                    <i class="fab fa-github"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
 
-<!-- Main -->
-<main>
+            <div class="profile-meta">
+                <p><i class="fas fa-envelope"></i> Email</p>
+                <p><i class="fas fa-map-marker-alt"></i> Melbourne, AU</p>
+                <p class="status">● Open to Work</p>
 
-<!-- HOME -->
-<section id="home" class="active">
-    <div class="hero">
-        <h1>Hi, I'm <span>Namis Ibrahim</span></h1>
-        <h2>Aspiring Cyber Security Engineer</h2>
-        <p>Building cloud, security, and automation solutions using Azure and modern DevOps practices.</p>
-
-        <div class="buttons">
-            <button onclick="showSection('projects')">View Projects</button>
-            <a href="resume.pdf" download>
-                <button>Download CV</button>
-            </a>
+		<p>Visitors: <span id="counter">Loading...</span></p>
+            </div>
         </div>
-    </div>
 
-    <div class="cards">
-        <div class="card"><i class="fas fa-briefcase"></i><p>3+ Years Experience</p></div>
-        <div class="card"><i class="fas fa-shield-alt"></i><p>5 Security Projects</p></div>
-        <div class="card"><i class="fas fa-cloud"></i><p>Azure Cloud</p></div>
-        <div class="card"><i class="fas fa-code"></i><p>Automation</p></div>
-    </div>
-</section>
+        <!-- About -->
+        <section id="about" class="active">
+            <h2>About Me</h2>
+            <p>
+                Aspiring Cyber Security Analyst with over three years of experience in IT service management and current hands-on experience as an Associate Systems Engineer in Wintel environments. Skilled in managing user access and resources in Active Directory and performing server vulnerability patching using BigFix. Proven track record of managing high-volume service desk operations, resolving 95% of tickets within SLAs, improving team efficiency by addressing call and process pain points, and increasing cybersecurity awareness by 20%. 
+            </p>
+        </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-<h2>Projects</h2>
+        <!-- Experience -->
+        <section id="experience">
+            <h2>Experience</h2>
+            <p><b> Associate Systems Engineer (Wintel), Datacom Pty Ltd (Mar 2026 - Present) </b></p>
 
-<div class="project-grid">
+	    •   Monitored, maintained, and optimized Windows Server environments to ensure high availability and system performance. <br>
+	    •   Managed user identities and access controls through Active Directory and Azure AD, including account provisioning and directory services administration. <br>
+	    •	Performed regular patching, system updates, and backups, and supported data restoration activities to maintain system integrity and resilience. <br>
+	    •	Supported virtualized environments using VMware and Hyper-V, along with basic storage administration tasks. <br>
+	    •	Diagnosed and resolved issues across operating systems, network services (DNS, DHCP, TCP/IP), and application services to minimize downtime.<br>
+	    •	Developed and maintained runbooks, technical documentation, and change logs to support operational consistency and knowledge sharing.<br>
+	    •	Automated routine administrative tasks using PowerShell and Bash scripting, and contributed to configuration management processes.<br>
+	    •	Participated in scheduled maintenance windows and on-call rotations to ensure continuous service support and rapid incident response.<br>
 
-<div class="project">
-<h3>SIEM – Wazuh Lab</h3>
-<p>Implemented SIEM monitoring, alerting rules, and incident response workflows.</p>
-</div>
+	    <p><b> Senior Service Desk Analyst, Datacom Pty Ltd  (Jun 2024 – Feb 2026) </b></p>
 
-<div class="project">
-<h3>Azure Honeypot</h3>
-<p>Captured real-world attack traffic and analysed malicious patterns.</p>
-</div>
+	    •	Delivered high-volume IT Service Desk support, managing 200+ tickets weekly with a 95% SLA resolution rate while maintaining high-quality service delivery. <br>
+	    •	Analysed call and ticket performance to identify recurring pain points, implementing process improvements that enhanced team efficiency and reduced resolution times.<br>
+	    •	Collaborated closely with Level 2 engineers to escalate and track complex user issues, identifying trends and converting recurring incidents into problem tickets to drive long-term resolution. <br>
+	    •	Optimised service desk operations by refining knowledge articles and developing up-to-date training modules, improving onboarding effectiveness and ensuring consistent service standards across agents. <br>
+	    •	Managed queue operations and escalations while producing detailed fortnightly performance reports to support data-driven decision-making. <br>
 
-<div class="project">
-<h3>SOAR Automation</h3>
-<p>Automated incident response using Tines + LimaCharlie.</p>
-</div>
+	    <p><b> Service Desk Analyst, Datacom Pty Ltd  (Sep 2022 – May 2024) </b></p>
 
-<div class="project">
-<h3>Malware Analysis Lab</h3>
-<p>Analysed malware using sandbox and reverse engineering techniques.</p>
-</div>
+	    •	Created and managed over 150 support service tickets monthly using the ServiceNow ticketing system, meticulously tracking and delivering timely support services to end-users. <br>
+	    •	Maintained a 98% customer satisfaction rate by delivering high-quality user interactions and upholding “best in class” service standards. <br>
+	    •	Mentored and coached 10+ new Service Desk staff, offering guidance and expertise, contributing to a 20% improvement in integration and performance within the first 3 months.<br>
+	    •	As a Cyber Security Awareness Committee Member, designed and facilitated an interactive security quiz, improving team cyber security awareness by 20%.<br>
 
-<div class="project">
-<h3>Active Directory Lab</h3>
-<p>Simulated AD attacks and defence techniques.</p>
-</div>
+        </section>
 
-</div>
-</section>
 
-<!-- ABOUT -->
-<section id="about">
-<h2>About Me</h2>
-<p>
-Associate Systems Engineer with hands-on experience in Windows infrastructure, 
-Active Directory, Azure AD, and cybersecurity labs. Passionate about cloud security 
-and automation.
-</p>
-</section>
+	<!-- Education -->
+        <section id="education">
+            <h2>Qualifications</h2>
 
-<!-- CONTACT -->
-<section id="contact">
-<h2>Contact</h2>
-<p><i class="fas fa-envelope"></i> namisibrahim85@gmail.com</p>
-<p><i class="fab fa-linkedin"></i> linkedin.com/in/namisibrahim</p>
-</section>
+	    <div class="cards">
 
-</main>
+                <div class="card">
+                    <h3>Education</h3>
+		    <p><b> Master of Cyber Security, RMIT (Part Time) - Ongoing </b></p>
+
+		    •	Conducted practical data science projects with Python, developing hands-on skills in data analysis, visualisation, and machine learning using Python and popular libraries such as pandas, matplotlib, and scikit-learn. Applied these techniques to real-world datasets, gaining practical experience in data preprocessing, model training, and evaluation. <br><br>
+		    •	Engaged extensively in Digital Risk Management and Information Security, deepening my understanding of cybersecurity principles, including the CIA triad, risk assessment methodologies, and security frameworks like NIST and ISO 27001. Contributed to projects aimed at identifying and mitigating digital risks in organisational settings, including the provision of quantitative risk analysis and security control recommendations. <br>
+
+		    <p><b> Certificate IV (Cyber Security), Victoria University - Jun 2023 </b></p>
+
+		    •	Project: Designed and deployed a Security Operations Center (SOC) in a controlled lab environment, focusing on network security and threat detection. Implemented pfSense for firewall protection, Suricata for IDS/IPS, and Splunk for centralised log management and visualisation. Executed penetration testing to assess system resilience and developed custom dashboards for monitoring security events. Augmented security posture through advanced log forwarding and system hardening techniques, acquiring hands-on experience in SOC operations and cybersecurity best practices. <br>
+
+                </div>
+
+                <div class="card">
+                    <h3>Certifications</h3>
+                    
+		    <p><b> Security Plus Certification –CompTIA - Apr 2025 </b></p>
+
+		    •	Validated foundational cybersecurity skills across network security, threat detection, vulnerability management, and incident response. Developed practical knowledge of security controls, cryptography, and risk mitigation aligned with industry best practices. <br> 
+
+		    <p><b> Certified in Cybersecurity (CC) – ISC2 - Dec 2024 </b></p>
+
+		    •	Gained a strong grounding in core cybersecurity concepts, including access control, security operations, and risk management. Built an understanding of security principles and frameworks essential for protecting organisational systems and data. <br> 
+
+                </div>
+	</section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>SIEM Lab</h3>
+                    <p>Wazuh SIEM monitoring and alerting</p>
+
+		    •	Conducted security event analysis and implemented remediation strategies to mitigate potential threats and prevent intrusions using Wazuh SIEM. <br>
+		    •	Prioritized and resolved security incidents based on their sensitivity and impact, ensuring timely and effective responses to maintain system security. <br>
+
+                    <!-- Skill Icons -->
+    		    <div class="skills">
+        		<i class="fas fa-network-wired" title="Network Security"></i>
+        		<i class="fas fa-chart-line" title="Analytics"></i>
+        		<i class="fas fa-server" title="Defense in Depth"></i>
+                    </div>
+		</div>
+
+                <div class="card">
+                    <h3>Azure Honeypot</h3>
+                    <p>Captured real-world attacks </p>
+
+		    •	Deployed a publicly exposed virtual machine in Azure to simulate a honeypot environment and capture real-world attack traffic. <br>
+		    •	Analysed incoming connections, attacker IPs, and intrusion attempts to identify common threat patterns and behaviours. <br>
+
+		    <!-- Skill Icons -->
+    		    <div class="skills">
+        		<i class="fab fa-microsoft" title="Azure"></i>
+        		<i class="fas fa-shield-alt" title="Security"></i>
+        		<i class="fas fa-bug" title="Threat Analysis"></i>
+                    </div>
+		</div>
+
+                <div class="card">
+                    <h3>SOAR</h3>
+                    <p>Automated incident response </p>
+
+		    •	Developed and integrated SOAR and EDR solutions using LimaCharlie and Tines to automate incident detection, response, and machine isolation workflows. <br>
+		    •	Configured real-time alerts and incident response notifications via Slack, enabling prompt decision-making. <br>
+
+                    <!-- Skill Icons -->
+    		    <div class="skills">
+        		<i class="fas fa-robot" title="Automation"></i>
+        		<i class="fas fa-bolt" title="Detection"></i>
+        		<i class="fas fa-cogs" title="Security"></i>
+                    </div>
+		</div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: namisibrahim85@gmail.com</p>
+        </section>
+
+    </main>
 </div>
 
 <script src="script.js"></script>

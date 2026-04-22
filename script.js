@@ -6,12 +6,14 @@ function showSection(id) {
 /* Visitor Counter */
 async function getVisitorCount() {
     try {
-        let res = await fetch("https://YOUR_FUNCTION_URL/api/GetVisitorCount");
-        let data = await res.text();
+        let response = await fetch("https://YOUR_FUNCTION_URL/api/GetVisitorCount");
+        let data = await response.text();
+
         document.getElementById("counter").innerText = data;
-    } catch {
+    } catch (error) {
         document.getElementById("counter").innerText = "N/A";
     }
 }
 
+// Run on page load
 getVisitorCount();
